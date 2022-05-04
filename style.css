@@ -1,0 +1,31 @@
+/* Custom Properties */
+
+
+/* Reset properties */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+main,
+h1,
+p {
+    margin: 0;
+}
+
+/* General styles */
+
+
+/* General typography */
+
+
+/* Attribution */
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
