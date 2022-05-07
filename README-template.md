@@ -44,23 +44,69 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
-
+I followed this general outline:
+1. Boilerplates for html and CSS.
+2. Structure html elements and items, adding classes and id's as much as I can before styling. Later I can edit classess and tags as they make more sense.
+3. Start styling by building my custom properties menu. Then colours, fonts and styles in each section individually. I do this to preserve responsiveness as much as possible until I'm ready to position elements.
+4. Positioning and sizing. When it comes to margins and padding, I tend to work top to bottom, rather than assigning each element more than one sizing property. For example, instead of all elements having a margin of 1em, the bottom of element a will have a margin bottom of 2em, element b and margin of 2 em, element c... so on and so forth. It makes it a lot easier to trouble shoot and edit.
+5. Re-read style-guide and README for details on UI, and then add features.
+6. Final touches.
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+The bigger lessons in this project were
+
+BACKGROUND IMAGE
+  replacing:
+  ```css
+  background-img {
+    ...
+  }
+
+  with: 
+  body {
+      background-image: url(images/pattern-background-mobile.svg);
+      background-size: 100%;
+  }
+  ```
+  This solved a problem I was having with the background image not falling behind the card. Adding 'background-size: 100%' solved the image repeating.
+
+ADJUSTING THE BACKGROUND IMAGE
+The image was the 'mobile-first' version, and therefore repeated on the desktop. Whilst a desktop version of the image was provided, I was playing around with what happens if I switch to desktop mode with a smaller image.
+a. Doesn't fill space laterally
+b. I want it only half the height of the page
+b. Repeats
+This is how I fe=ixed each:
+  ```css
+  body {
+    /* min-width: 375px; */
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: 100% 50%;      /* a and b solved */
+    background-repeat: no-repeat;   /* c solved*/
+  }
+  ```
+
+FITING AND IMAGE INSIDE A CONTAINER'S DIMENSIONS  
+  The image at the top of the card had been giving me a lot of headaches. It was too wide, causing scrolling, and would not fit the shape of the card container. I solved this with two css properties:
+
+  1. Image fit to container width
+  ```css
+  .hero img {
+   max-width: 100%;
+  }
+  ```
+  2. Image clipped to container shape/dimensions
+  ```css
+  .order-summary-card {
+    overflow: hidden;
+  }
+  ```
 
 To see how you can add code snippets, see below:
 

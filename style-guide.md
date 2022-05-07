@@ -1,4 +1,4 @@
-# Front-end Style Guide
+h1 # Front-end Style Guide
 
 ## Layout
 

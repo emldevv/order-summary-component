@@ -1,4 +1,13 @@
 /* Custom Properties */
+:root {
+    --primary-clr-pb: hsl(225, 100%, 94%);      /*pale blue*/
+    --primary-clr-bb: hsl(245, 75%, 52%);       /*bright blue*/  
+    --primary-clr-w: white;                     /*duh*/
+
+    --neutral-clr-vpb: hsl(225, 100%, 98%);     /*very plae blue*/
+    --neutral-clr-desatb: hsl(224, 23%, 55%);   /*desaturated blue*/
+    --neutral-clr-db: hsl(223, 47%, 23%);       /*dark blue*/
+}
 
 
 /* Reset properties */
@@ -15,26 +24,23 @@ p {
     margin: 0;
 }
 
+
 /* General styles */
 body {
     /* min-width: 375px; */
-    background-color: hsl(225, 100%, 94%);
-}
-main {
-    max-width: 100%;
-    /* min-width: 375px;
-    max-width: 667px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
+    background-color: var(--primary-clr-pb);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
     
 }
 
-.background-img {
-    z-index: -1;
+main {
     max-width: 100%;
+    padding-top: 12.5%;
 }
+
+
 /* General typography */
 html {
     font-family: 'Red Hat Display', sans-serif;
@@ -44,8 +50,8 @@ html {
 p {
     font-size: 1.6rem;
     font-weight: 500;
-    color: hsl(224, 23%, 55%);
-    line-height: 1.6;
+    color: var(--neutral-clr-desatb);
+    line-height: 1.5;
 }
 
 button p {
@@ -54,41 +60,61 @@ button p {
     font-weight: 900;
 }
 
-/* Background */
-
 
 /* Order Summary Card */
 .order-summary-card {
-    background-color: white;
+    background-color: var(--primary-clr-w);
     border-radius: 1em;
-    max-width: 330px;
+    width: 40%;
+    min-width: 330px;
     overflow: hidden;
+    margin: auto;
 }
 
-.text {
-    padding: 2em;
+.text-section {
+    padding: 0 2em;
+    margin: auto;
 }
+
+
 /* Hero */
 .hero img {
    max-width: 100%;
+   margin-bottom: 3rem;
 }
+
 
 /* Text Section */
 h1 {
-    color: hsl(223, 47%, 23%);
+    color: var(--neutral-clr-db);
     font-weight: 900;
+    margin: 0 auto; 
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.description {
+    margin: 0 auto;
+    padding: 0 0.75em;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 
 /* Plan Section */
 .plan-summary {
+    background: var(--neutral-clr-vpb);
+    border-radius: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3rem;
+    padding: 1.8em 1.3em;
 }
+
 #plan-type {
     font-weight: 900;
-    color: hsl(223, 47%, 23%);
+    color: var(--neutral-clr-db);
 }
 
 #plan-change {
@@ -96,21 +122,41 @@ h1 {
     font-weight: 700;
 }
 
+
 /* Order Section */
+.order-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
 #proceed {
-    background-color: hsl(245, 75%, 52%);
+    background-color: var(--primary-clr-bb);
     border: none;
     border-radius: 1rem;
+    margin-bottom: 2rem;
+    padding: 1em;
 }
+
 #proceed-text {
-    color: hsl(225, 100%, 98%);
+    color: var(--neutral-clr-vpb);
 }
 
 #cancel {
-    background-color: white;
+    background-color: var(--primary-clr-w);
     border: none;
     border-radius: 1rem;
 }
+
+@media (min-width: 600px) {
+    body {
+        background-color: var(--primary-clr-pb);
+        background-image: url(images/pattern-background-desktop.svg);
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+    }
+}
+
 
 /* Attribution */
 .attribution {
