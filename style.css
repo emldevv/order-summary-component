@@ -16,10 +16,69 @@ p {
 }
 
 /* General styles */
-
+body {
+    background-color: hsl(225, 100%, 94%);
+}
 
 /* General typography */
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 10px;  /* Use x1.6 Rem for 16px */
+}
 
+p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+    line-height: 1.6;
+}
+
+button p {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+/* Order Summary Card */
+.order-summary-card {
+    background-color: white;
+}
+
+/* Hero */
+
+
+/* Text Section */
+h1 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+
+/* Plan Section */
+#plan-type {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+#plan-change {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Order Section */
+#proceed {
+    background-color: hsl(245, 75%, 52%);
+    border: none;
+    border-radius: 1rem;
+}
+#proceed-text {
+    color: hsl(225, 100%, 98%);
+}
+
+#cancel {
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+}
 
 /* Attribution */
 .attribution {

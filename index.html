@@ -5,18 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Order summary card</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <Main>
+  <main>
     <img src="images/pattern-background-mobile.svg" alt="">
 
     <!-- Order Summary Card Start -->
@@ -36,10 +34,10 @@
 
 <!-- Plan Section -->
       <section class="summary" >
-        Annual Plan
-        $59.99/year
-
-        Change
+        <img src="images/icon-music.svg" alt="">
+        <p id="plan-type">Annual Plan</p>
+        <p id="plan-price">$59.99/year</p>
+        <a href="#" id="plan-change">Change</a>
       </section>
 
 <!-- Order Section -->
@@ -54,7 +52,7 @@
 
     <!-- Order Summary Card End -->
     </div>
-  </Main>
+  </main>
 
   
   <div class="attribution">
