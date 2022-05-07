@@ -17,9 +17,24 @@ p {
 
 /* General styles */
 body {
+    /* min-width: 375px; */
     background-color: hsl(225, 100%, 94%);
 }
+main {
+    max-width: 100%;
+    /* min-width: 375px;
+    max-width: 667px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    
+}
 
+.background-img {
+    z-index: -1;
+    max-width: 100%;
+}
 /* General typography */
 html {
     font-family: 'Red Hat Display', sans-serif;
@@ -38,13 +53,25 @@ button p {
     font-size: 1.6rem;
     font-weight: 900;
 }
+
+/* Background */
+
+
 /* Order Summary Card */
 .order-summary-card {
     background-color: white;
+    border-radius: 1em;
+    max-width: 330px;
+    overflow: hidden;
 }
 
+.text {
+    padding: 2em;
+}
 /* Hero */
-
+.hero img {
+   max-width: 100%;
+}
 
 /* Text Section */
 h1 {
@@ -54,6 +81,11 @@ h1 {
 
 
 /* Plan Section */
+.plan-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #plan-type {
     font-weight: 900;
     color: hsl(223, 47%, 23%);
